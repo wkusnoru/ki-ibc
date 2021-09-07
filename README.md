@@ -1,25 +1,17 @@
 # Ibc transactions for kichain<->rizon
 
    In this article I will tell you how to set up a repeater for cross translation between two networks using the example of Rizon and Kichain
-For this we need a repeater and two working nodes. Or a relay and one working node and a global rpc from the second network. Or a repeater and a global rpc from two networks. But everything is in order.
-I will install a repeater for the Rizon node, but you can choose any other method that suits you. The main criterion is that the selected network must have IBC-transfer enabled.
-  This parameter can be checked by entering in the terminal where the node is installed. the following command:
+Check rizon:
  
  > rizond q ibc-transfer params  # (replace rizond with your node's command)
- 
- # the response should contain the following output:
 
-> receive_enabled: true
-> send_enabled: true
-          
+ > Response:
   
-  So we found out that the Rizon Network is great for cross transactions. Let's start installing and adjusting the Repeater.
-Download and install the repeater from the official source Relayer v.1.0.0
+ > receive_enabled: true
+ > send_enabled: true
 
-
-> git clone https://github.com/cosmos/relayer.git
-
-> cd relayer
+ ## Install relayer
+ > git clone https://github.com/cosmos/relayer.git && cd relayer
 
 > make install
 
@@ -27,11 +19,13 @@ Download and install the repeater from the official source Relayer v.1.0.0
 
 > rly version
 
-output:
+> Response:
 
-version: 1.0.0-rc1–152-g112205b
+> version: 1.0.0-rc1–152-g112205b
 
- 
+> rly config init
+
+
  ##                                                  Initializing the repeater
 
 > rly config init
