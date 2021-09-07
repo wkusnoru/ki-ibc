@@ -1,4 +1,4 @@
-# Ibc-transaction-for-kichain
+# Ibc transactions for kichain<->rizon
 
    In this article I will tell you how to set up a repeater for cross translation between two networks using the example of Rizon and Kichain
 For this we need a repeater and two working nodes. Or a relay and one working node and a global rpc from the second network. Or a repeater and a global rpc from two networks. But everything is in order.
