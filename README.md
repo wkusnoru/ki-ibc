@@ -103,9 +103,9 @@ Change the configuration
 
 Delete sections on both networks
 
- client-id: 07-tendermint-16
- connection-id: connection-14
- channel-id: channel-11
+ client-id: ..-tendermint-..
+ connection-id: connection-..
+ channel-id: channel-..
 
 Re-initialize the light client
 
